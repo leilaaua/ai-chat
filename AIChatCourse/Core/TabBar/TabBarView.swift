@@ -9,7 +9,26 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            TabView {
+                ExploreView()
+                    .tabItem {
+                        Label("Explore", systemImage: "eyes")
+                    }
+                
+                ChatsView()
+                    .tabItem {
+                        Label("Chats", systemImage: "bubble.left.and.bubble.right.fill")
+                    }
+                
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+            }
+            .navigationBarBackButtonHidden()
+        }
+        
     }
 }
 
