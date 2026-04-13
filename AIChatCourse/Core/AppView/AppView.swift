@@ -1,0 +1,36 @@
+//
+//  AppView.swift
+//  AIChatCourse
+//
+//  Created by leila on 13.04.26.
+//
+
+import SwiftUI
+
+struct AppView: View {
+    @AppStorage("showTabbarView") var showTabBar: Bool = false
+    
+    var body: some View {
+        AppViewBuilder(
+            showTabBar: showTabBar) {
+                ZStack {
+                    Color.red.ignoresSafeArea()
+                    Text("Tabbar")
+                }
+            } onboardingView: {
+                ZStack {
+                    Color.blue.ignoresSafeArea()
+                    Text("Onboarding")
+                }
+            }
+            .animation(.smooth, value: showTabBar)
+    }
+}
+
+#Preview("AppView - Tabbar") {
+    AppView(showTabBar: true)
+}
+
+#Preview("AppView - Onboarding") {
+    AppView(showTabBar: false)
+}
