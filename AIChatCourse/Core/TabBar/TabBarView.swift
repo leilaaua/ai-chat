@@ -18,7 +18,7 @@ struct TabBarView: View {
                 
                 ChatsView()
                     .tabItem {
-                        Label("Chats", systemImage: "bubble.left.and.bubble.right.fill")
+                        Label("Chats", systemImage: "bubble.left.and.bubble.rigÇht.fill")
                     }
                 
                 ProfileView()

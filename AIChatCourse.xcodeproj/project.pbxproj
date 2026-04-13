@@ -248,6 +248,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1826F4662F852A1B0017BBB7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -261,7 +262,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "    if [[ \"$(uname -m)\" == arm64 ]]; then\n        export PATH=\"/opt/homebrew/bin:$PATH\"\n    fi\n        if which swiftlint > /dev/null; then\n            swiftlint --fix && swiftlint\n        else\n            echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "    if [[ \"$(uname -m)\" == arm64 ]]; then\n        export PATH=\"/opt/homebrew/bin:$PATH\"\n    fi\n        if which swiftlint > /dev/null; then\n            swiftlint #swiftlint --fix && \n        else\n            echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
