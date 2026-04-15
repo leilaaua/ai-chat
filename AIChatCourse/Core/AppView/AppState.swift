@@ -15,7 +15,7 @@ class AppState {
         }
     }
     
-    init(showTabBar: Bool = UserDefaults.standard.bool(forKey: "showTabbarView")) {
+    init(showTabBar: Bool = UserDefaults.showTabBarView) {
         self.showTabBar = showTabBar
     }
     
@@ -27,16 +27,16 @@ class AppState {
 extension UserDefaults {
     
     private struct Keys {
-        static let showTabBarView = "showTabbarView"
+        static let showTabbarView = "showTabbarView"
     }
     
     static var showTabBarView: Bool {
         get {
-            standard.bool(forKey: Keys.showTabBarView)
+            standard.bool(forKey: Keys.showTabbarView)
         }
         
         set {
-            standard.set(newValue, forKey: Keys.showTabBarView)
+            standard.set(newValue, forKey: Keys.showTabbarView)
         }
     }
 }

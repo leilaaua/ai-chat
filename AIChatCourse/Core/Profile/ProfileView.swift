@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @State private var showingSettingsView: Bool = false
+    
     var body: some View {
         NavigationStack {
             Text("Profile")

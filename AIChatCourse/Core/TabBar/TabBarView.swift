@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        NavigationStack {
             TabView {
                 ExploreView()
                     .tabItem {
@@ -18,7 +17,7 @@ struct TabBarView: View {
                 
                 ChatsView()
                     .tabItem {
-                        Label("Chats", systemImage: "bubble.left.and.bubble.rigÇht.fill")
+                        Label("Chats", systemImage: "bubble.left.and.bubble.right.fill")
                     }
                 
                 ProfileView()
@@ -26,9 +25,6 @@ struct TabBarView: View {
                         Label("Profile", systemImage: "person.fill")
                     }
             }
-            .navigationBarBackButtonHidden()
-        }
-        
     }
 }
 

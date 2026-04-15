@@ -32,21 +32,23 @@ private struct PreviewView: View {
     
     var body: some View {
         AppViewBuilder(
-            showTabBar: showTabBar) {
+            showTabBar: showTabBar,
+            tabbarView: {
                 ZStack {
                     Color.red.ignoresSafeArea()
                     Text("Tabbar")
                 }
-            } onboardingView: {
+            },
+            onboardingView: {
                 ZStack {
                     Color.blue.ignoresSafeArea()
                     Text("Onboarding")
                 }
             }
-            .animation(.smooth, value: showTabBar)
-            .onTapGesture {
-                showTabBar.toggle()
-            }
+        )
+        .onTapGesture {
+            showTabBar.toggle()
+        }
     }
 }
 

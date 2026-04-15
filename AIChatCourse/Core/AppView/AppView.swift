@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct AppView: View {
     @State var appState: AppState = AppState()
     
