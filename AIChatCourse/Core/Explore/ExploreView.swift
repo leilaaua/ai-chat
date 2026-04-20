@@ -12,6 +12,7 @@ struct ExploreView: View {
         NavigationStack {
             Text("Explore")
                 .navigationTitle("Explore")
+                .padding()
         }
     }
 }
